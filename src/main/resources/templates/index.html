@@ -11,8 +11,29 @@
     <title>Catalog</title>
 </head>
 <body>
-<h1>It's alive
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa aaaaaaaaaaaaaaa</h1>
+<h1>It's alive</h1>
+<p>aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
+
+<table>
+    <thead>
+        <tr>
+            <td>Name</td>
+            <td>Price</td>
+        </tr>
+    </thead>
+    <tbody>
+    <!--voor elk product dus for each zie uitwerking hieronder-->
+        <tr th:each="product:${all}">
+            <td th:text="${product.name}"> </td>
+            <td th:text="${product.price}"> </td>
+
+        </tr>
+
+    </tbody>
+
+
+
+</table>
 
 </body>
 </html>
